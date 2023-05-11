@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Rubik&display=swap');
+
+body {
+    background-color: rgb(26, 26, 26);
+}
+
+header {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em;
+    padding-top: 1em;
+
+    text-shadow:
+        0 0 9px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff;
+
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#header-div {
+    background-color: rgb(88, 88, 88);
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 1em;
+}
+
+#subheader-text {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: 'Rubik', sans-serif;
+    padding-bottom: 1em;
+}

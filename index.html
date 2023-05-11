@@ -13,7 +13,9 @@
     <meta name='robots' content='all'>
     <link href='assets/ikona.webp' rel='shortcut icon' type='image/png'>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/slideshow.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 
     <title>Dynamic Web</title>
@@ -22,16 +24,24 @@
 
 <body>
 
-    <header>
-        <a href="index.html">Dynamický web</a>
-    </header>
+    <div id="header-div">
 
-    <p>Zde si můžete zahrát kvíz na poznávání značek aut.</p>
+        <header>
+            <a href="index.html">Dynamický web</a>
+        </header>
 
-    <section></section> <!-- SLIDESHOW -->
+        <p id="subheader-text">Zde si můžete zahrát kvíz na poznávání značek aut.</p>
 
-    <div>
-        
+    </div>
+
+    <div class=container>
+        <a id="pepiki" href="#" class="arrowL">&lt;</a>
+        <div id="slideshow">
+            <div><img src="http://unsplash.it/620/450?image=401"/></div>
+            <div class="hidden"><img src="http://unsplash.it/620/450?image=368"/></div>
+            <div class="hidden"><img src="http://unsplash.it/620/450?image=266"/></div>
+        </div>
+        <a id="pepik" href="#" class="arrowR">&gt;</a>
     </div>
 
     <nav>
