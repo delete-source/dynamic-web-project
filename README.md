@@ -1,1 +1,1 @@
-# dynamic-web-project
+# School project
