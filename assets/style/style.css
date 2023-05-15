@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Rubik&display=swap');
 
+
+/*https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js*/
+* {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 body {
     background-color: rgb(26, 26, 26);
 }
@@ -36,4 +47,35 @@ a {
     font-size: 1em;
     font-family: 'Rubik', sans-serif;
     padding-bottom: 1em;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    margin: 1em;
+}
+
+button {
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 0.75em;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 1em;
+    margin: 0.1em;
+    padding: 0.8em;
+    background-color: rgb(88, 88, 88);
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 1em;
 }
