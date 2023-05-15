@@ -79,3 +79,8 @@ footer {
     margin-right: 15%;
     border-radius: 1em;
 }
+
+.button-link {
+    font-family: 'Rubik', sans-serif;
+    color: black;
+}
