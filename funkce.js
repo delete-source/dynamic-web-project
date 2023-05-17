@@ -41,7 +41,8 @@ $(document).ready(main);
 
 window.addEventListener("load", function() {
 	let datum = new Date();
-	document.getElementById("date").innerHTML = datum.getDate() + '.' + datum.getMonth() + 1 + '.' + datum.getFullYear();
+	let month = datum.getMonth()+1;
+	document.getElementById("date").innerHTML = datum.getDate() + '.' + month + '.' + datum.getFullYear();
 });
 
 function rainbowTextAnim() {
