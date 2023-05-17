@@ -34,8 +34,23 @@ var main = function() {
 			.appendTo('#slideshow');
 		}
 	},  5000);
-   
-	
+
 };
 
 $(document).ready(main);
+
+window.addEventListener("load", function() {
+	let datum = new Date();
+	document.getElementById("date").innerHTML = datum.getDate() + '.' + datum.getMonth() + 1 + '.' + datum.getFullYear();
+});
+
+function rainbowTextAnim() {
+	const textElement = document.querySelector('.jsAnimRainbow');
+	textElement.classList.add('wave-animation');
+
+	// Remove the animation class after the animation duration
+	setTimeout(function() {
+		textElement.classList.remove('wave-animation');
+	}, 1000);
+}
+

@@ -19,8 +19,8 @@ header {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 2.5em;
-    margin: 1em;
-    padding-top: 1em;
+    margin: 0.75em;
+    padding-top: 0.5em;
 
     text-shadow:
         0 0 9px #fff,
@@ -47,6 +47,7 @@ a {
     font-size: 1em;
     font-family: 'Rubik', sans-serif;
     padding-bottom: 1em;
+    cursor: pointer;
 }
 
 li {
@@ -83,4 +84,31 @@ footer {
 .button-link {
     font-family: 'Rubik', sans-serif;
     color: black;
+}
+
+.wave-animation {
+    animation: wave 1s linear;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+        color: red;
+    }
+    25% {
+        transform: translateX(20%);
+        color: orange;
+    }
+    50% {
+        transform: translateX(0%);
+        color: yellow;
+    }
+    75% {
+        transform: translateX(-20%);
+        color: green;
+    }
+    100% {
+        transform: translateX(0);
+        color: blue;
+    }
 }
