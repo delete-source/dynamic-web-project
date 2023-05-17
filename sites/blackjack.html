@@ -11,12 +11,12 @@
   <meta name="keywords" content="Kvíz, SPŠE, Zedník, Svoboda, Auta">
   <meta name="author" content="Zedník, Svoboda">
   <meta name='robots' content='all'>
-  <link href='../assets/img/ikona.webp' rel='shortcut icon' type='image/png'>
+  <link href='../assets/img/bj-icon.webp' rel='shortcut icon' type='image/png'>
 
   <link rel="stylesheet" href="../assets/style/style.css">
   <link rel="stylesheet" href="../assets/style/slideshow.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../funkce.js"></script>
+  <script src="../assets/scripts/blackjack.js"></script>
 
   <title>Kvíz aut</title>
 
@@ -30,19 +30,35 @@
       <a href="../index.html">Dynamický web</a>
     </header>
 
-    <p id="subheader-text">Zde si můžete zahrát kvíz na poznávání značek aut.</p>
+    <p class="jsAnimRainbow" onclick="rainbowTextAnim()" id="subheader-text">Zde si můžete zahrát blackjack.</p>
 
   </div>
 
+  <section>
 
+    <h2>DEALER: <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+      <img alt="KARTA" id="hidden" src="../assets/img/karty/BACK.webp">
+    </div>
 
+    <h2>TY: <span id="your-sum"></span></h2>
+    <div id="your-cards"></div>
+
+    <br>
+
+    <button id="hit">Hit</button>
+    <button id="stay">Stay</button>
+    <button id="refresh">Restart</button>
+
+    <p id="results"></p>
+
+  </section>
 
   <footer>
-    Vytvořil Matyáš Svoboda a Šímon Zedník 2023 <br> <br>
+    Vytvořil Matyáš Svoboda a Šímon Zedník 2023
+    <p id="date" onmouseover="mouseOver()" onmouseout="mouseOut()">XX.XX.XXXX</p>
     <a href="https://www.github.com/delete-source/dynamic-web-project">SourceCode</a>
   </footer>
-
-  <img id="logo" alt="LOGO-APLIKACE" src="../assets/img/background-car.webp">
 
 </body>
 

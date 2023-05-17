@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/style/slideshow.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="funkce.js"></script>
+    <script src="assets/scripts/slideshow.js"></script>
 
     <title>Dynamic Web</title>
 
@@ -30,7 +31,7 @@
             <a href="index.html">Dynamický web</a>
         </header>
 
-        <p class="jsAnimRainbow" onclick="rainbowTextAnim()" id="subheader-text">Zde si můžete zahrát kvíz na poznávání značek aut.</p>
+        <p class="jsAnimRainbow" onclick="rainbowTextAnim()" id="subheader-text">Zde si můžete zahrát blackjack.</p>
 
     </div>
 
@@ -48,7 +49,7 @@
     <nav>
         <ul>
             <li>
-                <button><a class="button-link" href="sites/kviz.html">Kvíz Aut</a></button>
+                <button><a class="button-link" href="sites/blackjack.html">Blackjack</a></button>
             </li>
             <li>
                 <button><a class="button-link" href="sites/skola.html">Škola</a></button>
@@ -58,7 +59,7 @@
 
     <footer>
         Vytvořil Matyáš Svoboda a Šímon Zedník 2023
-        <p id="date">XX.XX.XXXX</p>
+        <p id="date" onmouseover="mouseOver()" onmouseout="mouseOut()">XX.XX.XXXX</p>
         <a href="https://www.github.com/delete-source/dynamic-web-project">SourceCode</a>
     </footer>
 
