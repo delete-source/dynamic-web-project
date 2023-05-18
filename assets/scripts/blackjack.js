@@ -69,6 +69,8 @@ function startGame() {
     document.getElementById("stay").addEventListener("click", stay);
     document.getElementById("refresh").addEventListener("click", refresh);
 
+    document.getElementById("your-sum").innerText = yourSum;
+
 }
 
 function hit() {
