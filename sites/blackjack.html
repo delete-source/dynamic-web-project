@@ -11,12 +11,14 @@
   <meta name="keywords" content="Kvíz, SPŠE, Zedník, Svoboda, Auta">
   <meta name="author" content="Zedník, Svoboda">
   <meta name='robots' content='all'>
+  
   <link href='../assets/img/bj-icon.webp' rel='shortcut icon' type='image/png'>
   <link rel="stylesheet" href="../assets/style/style.css">
   <link rel="stylesheet" href="../assets/style/slideshow.css">
+
   <script src="../funkce.js"></script>
   <script src="../assets/scripts/blackjack.js"></script>
-  <script src="../assets/scripts/feedback.js"></script>
+  <script src="../assets/scripts/dialog.js"></script>
 
   <title>Kvíz aut</title>
 
@@ -55,31 +57,27 @@
   </section>
 
 
-<dialog id="favDialog">
-<form>
-  <p>
+  <dialog id="favDialog">
+    <form>
+      <p>
         <label>Favorite animal:
           <select>
-            
-          <option value="default">Choose…</option>
+            <option value="default">Choose…</option>
             <option>Brine shrimp</option>
             <option>Red panda</option>
             <option>Spider monkey</option>
           </select>
-
         </label>
-
       </p>
-
       <div>
         <button value="cancel" formmethod="dialog">Cancel</button>
-        <button id="confirmBtn" value="default">Submit</button>
+        <button id="confirmBtn" value="default">Confirm</button>
       </div>
-
     </form>
-
   </dialog>
-
+  <p>
+    <button id="showDialog">Show the dialog</button>
+  </p>
   <output></output>
 
 
@@ -91,7 +89,7 @@
 
   <div id="icons">
 
-    <img onclick="rulesDialog()" alt="INFO-ICON" src="../assets/img/info-icon.webp">
+    <img alt="INFO-ICON" src="../assets/img/info-icon.webp">
     <img alt="FEEDBACK-ICON" src="../assets/img/feedback-icon.webp">
 
   </div>
