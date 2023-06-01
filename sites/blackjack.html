@@ -73,33 +73,36 @@
 
     <h5>Zpětná vazba</h5>
 
-    <form>
+    <form id="feedbackForm" action="/submit" method="post">
       <label for="jmeno">Jméno:</label><br>
       <input type="text" id="jmeno" name="fname" value="Maty"><br><br>
 
-      <label>Názor:</label><br>
-      <input type="radio" id="html" name="fav_language" value="HTML">
-      <label for="html">Dobrý</label>
-      <input type="radio" id="css" name="fav_language" value="CSS">
-      <label for="css">Nedobrý</label><br><br>
+      <label for="nazor" >Názor:</label><br>
+      <input type="radio" id="good" name="nazor" value="Dobrý">
+      <label for="good">Dobrý</label>
+      <input type="radio" id="notgood" name="nazor" value="Nedobrý">
+      <label for="notgood">Nedobrý</label><br><br>
 
       <label for="country">Země:</label>
       <select id="country" name="country">
-        <option value="CZ">Česká republika</option>
-        <option value="SK">Horní uhry </option>
-        <option value="PL">Polsko</option>
-        <option value="DE">Německo</option>
+        <option value="Česká republika">Česká republika</option>
+        <option value="Slovensko">Slovensko</option>
+        <option value="Polsko">Polsko</option>
+        <option value="Německo">Německo</option>
       </select><br><br>
 
-      <label for="colors">Oblíbené Hazardní hry:</label><br>
-      <input type="checkbox" id="red" name="colors[]" value="red">
-      <label for="red">BlackJack</label><br>
-      <input type="checkbox" id="blue" name="colors[]" value="blue">
-      <label for="blue">Ruleta</label><br>
-      <input type="checkbox" id="green" name="colors[]" value="green">
-      <label for="green">Modrá Velryba</label><br>
-      <input type="checkbox" id="yellow" name="colors[]" value="yellow">
-      <label for="yellow">Automaty</label><br><br>
+      <label for="hazard">Oblíbené Hazardní hry:</label><br>
+      <input type="checkbox" id="bj" name="hazard[]" value="BlackJack">
+      <label for="bj">BlackJack</label><br>
+      <input type="checkbox" id="rul" name="hazard[]" value="Ruleta">
+      <label for="rul">Ruleta</label><br>
+      <input type="checkbox" id="kys" name="hazard[]" value="Modrá Velryba">
+      <label for="kys">Modrá Velryba</label><br>
+      <input type="checkbox" id="maty" name="hazard[]" value="Automaty">
+      <label for="maty">Automaty</label><br><br>
+
+      <label for="notes">Co by jste zlepšil:</label><br>
+      <textarea id="notes" name="notes" maxlength="200"></textarea>
 
       <input type="submit" value="Odeslat">
 
