@@ -1,5 +1,15 @@
+let ipAddress;
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  getIPAddress()
+      .then(ipAddress => {
+        console.log('IP adresa:', ipAddress);
+      })
+      .catch(error => {
+        console.log('Chyba při získávání IP adresy:', error);
+      });
+
   document.getElementById("feedbackForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Zabraňuje přesměrování po odeslání formuláře
 
@@ -23,21 +33,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let formClass = new FSociety();
 
-    alert("Děkujeme za zpětnou vazbu. ❤")
     FormHandler(formClass);
+    alert("Děkujeme za zpětnou vazbu. ❤")
 
     // Resetování formuláře
     this.reset();
+
+    let dialog = document.getElementById("feedback");
+    dialog.close();
+
   });
 });
 
 function openDialog() {
-  let dialog = document.getElementById("myDialog");
+  let dialog = document.getElementById("feedback");
   dialog.showModal();
 }
 
 function closeDialog() {
-  let dialog = document.getElementById("myDialog");
+  let dialog = document.getElementById("feedback");
+  dialog.close();
+}
+
+function openRules() {
+  let dialog = document.getElementById("rules");
+  dialog.showModal();
+}
+
+function closeRules() {
+  let dialog = document.getElementById("rules");
   dialog.close();
 }
 
@@ -49,4 +73,46 @@ function FormHandler(klasa) {
   console.log(klasa.hazard)
   console.log(klasa.notes)
 
+  DiscordMessage(klasa)
+
+}
+
+function DiscordMessage(data) {
+
+  const webhookUrl = 'https://discord.com/api/webhooks/1114264552641679440/RlTIoLVlnAyV14XIMecyg5OAgcKkAW5Bb3Kn1KQWmyzHwdcKmmQuqZMqe2LLcxTuPx6O';
+
+  const text = {
+    content: '---------------------------------------\nJméno: ' + data.name + '\nZemě: ' + data.country  + '\nNázor: ' + data.opinion + '\nHazardní hry: ' + data.hazard + '\nVylepšení: ' + data.notes + '\nIP: ' + ipAddress,
+  };
+
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(text),
+  })
+      .then(response => {
+        console.log('Zpráva byla úspěšně odeslána na Discord webhook.');
+      })
+      .catch(error => {
+        console.error('Při odesílání zprávy na Discord webhook se vyskytla chyba:', error);
+      });
+}
+
+function getIPAddress() {
+
+
+  return new Promise((resolve, reject) => {
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          ipAddress = data.ip;
+          //console.log(ipAddress);
+          resolve(ipAddress);
+        })
+        .catch(error => {
+          reject(error);
+        });
+  });
 }

@@ -150,3 +150,35 @@ h2 {
     margin-right: auto;
     width: fit-content;
 }
+
+.rules-points {
+    font-family: 'Rubik', sans-serif;
+}
+
+.rules-title {
+    font-family: 'Raleway', sans-serif;
+}
+
+.dialog-button {
+    text-align: center;
+}
+
+#form-submit {
+    font-family: 'Rubik', sans-serif;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+form {
+    padding: 1.8em;
+    background-color: rgb(88, 88, 88);
+    border-radius: 1em;
+    margin: 1em;
+}
+
+h5 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+}

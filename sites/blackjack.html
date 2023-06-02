@@ -65,11 +65,11 @@
   <div id="icons">
 
     <img onclick="openDialog()" alt="FEEDBACK-ICON" src="../assets/img/feedback-icon.webp">
-    <img alt="INFO-ICON" src="../assets/img/info-icon.webp">
+    <img onclick="openRules()" alt="INFO-ICON" src="../assets/img/info-icon.webp">
 
   </div>
 
-  <dialog id="myDialog">
+  <dialog id="feedback">
 
     <h5>Zpětná vazba</h5>
 
@@ -102,14 +102,38 @@
       <label for="maty">Automaty</label><br><br>
 
       <label for="notes">Co by jste zlepšil:</label><br>
-      <textarea id="notes" name="notes" maxlength="200"></textarea>
+      <textarea id="notes" name="notes" maxlength="200"></textarea><br><br>
 
-      <input type="submit" value="Odeslat">
-
+      <div class="dialog-button">
+        <input id="form-submit" type="submit" value="Odeslat">
+      </div>
 
     </form>
 
-    <button onclick="closeDialog()">Zavřít</button>
+    <div class="dialog-button">
+      <button onclick="closeDialog()">Zavřít</button>
+    </div>
+
+  </dialog>
+
+  <dialog id="rules">
+
+    <h1 class="rules-title">Pravidla Blackjacku</h1>
+
+    <p class="rules-points">1. Karetní hra, ve které hráči soutěží proti dealerovi.</p>
+    <p class="rules-points">2. Cílem je získat vyšší hodnotu karet než dealer, ale nepřekročit součet karet 21.</p>
+    <p class="rules-points">3. Hrací karty mají hodnoty: karty s čísly mají hodnotu odpovídající číslu (2-10), obrázkové karty mají hodnotu 10, a eso může mít hodnotu 1 nebo 11.</p>
+    <p class="rules-points">4. Hráč dostává dvě karty lícem nahoru, zatímco dealer dostává jednu kartu lícem nahoru a jednu kartu lícem dolů.</p>
+    <p class="rules-points">5. Hráč se rozhoduje, zda si vezme další kartu (hit) nebo ponechá součet karet (stand).</p>
+    <p class="rules-points">6. Pokud hráč překročí součet karet 21, ztrácí (bust) a dealer vyhrává.</p>
+    <p class="rules-points">7. Dealer si bere další kartu (hit) do té doby, dokud součet jeho karet nedosáhne nebo překročí hodnotu 17.</p>
+    <p class="rules-points">8. Pokud dealer překročí 21 (bust), všichni hráči s vyšším součtem karet vyhrávají.</p>
+    <p class="rules-points">9. Pokud dealer dosáhne součtu 17 nebo vyšší a nepřekročí 21, porovnává se součet karet hráčů s dealerem. Hráči s vyšším součtem karet než dealer vyhrávají.</p>
+    <p class="rules-points">10. Blackjack (eso a karta s hodnotou 10) je nejvyšší kombinace a hráč s blackjackem vyhrává okamžitě, pokud dealer nemá také blackjack.</p>
+
+    <div class="dialog-button">
+      <button onclick="closeRules()">Zavřít</button>
+    </div>
 
   </dialog>
 
